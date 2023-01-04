@@ -1,0 +1,79 @@
+[
+  {
+    "description": "    As a user\n    I want to login into application",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-action;login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 276823073
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I visit a login page",
+            "match": {
+              "location": "step-definitions/login-step.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 449397432
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I fill the login form with valid credentials",
+            "match": {
+              "location": "step-definitions/login-step.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 842025500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should see the home page",
+            "match": {
+              "location": "step-definitions/login-step.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11621907
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1286868
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-action",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login Action",
+    "tags": [],
+    "uri": "features/login.feature"
+  }
+]
