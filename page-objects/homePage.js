@@ -1,7 +1,7 @@
 class HomePage{
 
     async userIsLoggedInPage(){
-        await expect(page.locator(".title")).toContainText("Products")
+        await page.waitForSelector('.inventory_list')
     }
 }
 

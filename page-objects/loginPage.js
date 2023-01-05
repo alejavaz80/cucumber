@@ -1,13 +1,20 @@
+const { expect } = require('@playwright/test')
 class LoginPage{
 
-    async navigateToLoginPage(){
+    async navigateToLoginPage() {
         await page.goto("https://saucedemo.com");
     }
 
-    async enterCorrectLoginCredentials(){
-        await page.locator("#user-name").type("standard_user")
-        await page.locator("#password").type("secret_sauce")
-        await page.locator("#login-button").click()
+    async enterLoginCredentials(user, pass) {
+        await page.fill("#user-name", user)
+        await page.fill("#password", pass)
+        await page.click("#login-button")
+        await page.waitForLoadState('networkidle')
+    }
+
+    async assertErrorMessage(){
+        const message = await page.locator(".error-message-container")
+        await expect(message).toBeVisible()
     }
 }
 

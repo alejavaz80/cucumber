@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js --require cucumber.js --require step-definitions/**/*.js -f json:cucumber_report.json --publish-quiet"
+    "test": "./node_modules/.bin/cucumber-js --require cucumber.js --require step-definitions/**/*.js -f json:cucumber_report.json --publish-quiet",
+    "reporter": "node reporter.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@cucumber/cucumber": "^8.10.0",
+    "@playwright/test": "^1.29.1",
     "chai": "^4.3.7",
     "cucumber-html-reporter": "^5.5.0",
     "playwright": "^1.29.1",

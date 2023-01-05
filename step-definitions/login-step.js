@@ -1,16 +1,28 @@
 const { Given, When, Then } = require("@cucumber/cucumber")
+const { LoginPage } = require("../page-objects/loginPage")
+const { HomePage } = require("../page-objects/homePage")
 
-Given("I visit a login page", async function ()  {
-    await page.goto("https://www.saucedemo.com/")
+const loginPage = new LoginPage()
+const homePage = new HomePage()
+
+Given("I visit a login page", async function(){
+    await loginPage.navigateToLoginPage()
 })
 
-When("I fill the login form with valid credentials", async function () {
-    await page.locator("#user-name").type("standard_user")
-    await page.locator("#password").type("secret_sauce")
-    await page.locator("#login-button").click()
-    await page.waitForLoadState('networkidle')
+//When("I fill the login form with valid credentials", async function(){
+
+When(/I fill the login form user "([^"]*)" and password "([^"]*)"/, async function(user, pass){
+    await loginPage.enterLoginCredentials(user, pass)
 })
 
-Then("I should see the home page", async function () {
-    await page.waitForSelector('.inventory_list')
+When(/I incorrectly fill the login form user "([^"]*)" and password "([^"]*)"/, async function(user, pass){
+    await loginPage.enterLoginCredentials(user, pass)
+})
+
+Then("I should see the home page", async function(){
+    await homePage.userIsLoggedInPage()
+})
+
+Then("I should see a error message", async function(){
+    await loginPage.assertErrorMessage()
 })

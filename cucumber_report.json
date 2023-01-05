@@ -1,5 +1,148 @@
 [
   {
+    "description": "    As a user\n    If i enter incorrect credentials i will not be able to login",
+    "elements": [
+      {
+        "description": "",
+        "id": "incorrect-login;incorrect-credentials-to-login",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Incorrect credentials to login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 904549224
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I visit a login page",
+            "match": {
+              "location": "step-definitions/login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1422593513
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I incorrectly fill the login form user \"incorrect_user1\" and password \"incorrect_password1\"",
+            "match": {
+              "location": "step-definitions/login-step.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 504856398
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should see a error message",
+            "match": {
+              "location": "step-definitions/login-step.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15902139
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2250033
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "incorrect-login;incorrect-credentials-to-login",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Incorrect credentials to login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 418492702
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I visit a login page",
+            "match": {
+              "location": "step-definitions/login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1402118347
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I incorrectly fill the login form user \"incorrect_user2\" and password \"incorrect_password2\"",
+            "match": {
+              "location": "step-definitions/login-step.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 504319164
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should see a error message",
+            "match": {
+              "location": "step-definitions/login-step.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9792293
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1724332
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "incorrect-login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Incorrect login",
+    "tags": [],
+    "uri": "features/incorrectlogin.feature"
+  },
+  {
     "description": "    As a user\n    I want to login into application",
     "elements": [
       {
@@ -14,7 +157,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 276823073
+              "duration": 343401491
             }
           },
           {
@@ -23,24 +166,24 @@
             "line": 7,
             "name": "I visit a login page",
             "match": {
-              "location": "step-definitions/login-step.js:3"
+              "location": "step-definitions/login-step.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 449397432
+              "duration": 1400933686
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 8,
-            "name": "I fill the login form with valid credentials",
+            "name": "I fill the login form user \"standard_user\" and password \"secret_sauce\"",
             "match": {
-              "location": "step-definitions/login-step.js:7"
+              "location": "step-definitions/login-step.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 842025500
+              "duration": 844871698
             }
           },
           {
@@ -49,11 +192,11 @@
             "line": 9,
             "name": "I should see the home page",
             "match": {
-              "location": "step-definitions/login-step.js:14"
+              "location": "step-definitions/login-step.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 11621907
+              "duration": 10406787
             }
           },
           {
@@ -61,7 +204,139 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1286868
+              "duration": 1418279
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-action;incorrect-credentials-to-login",
+        "keyword": "Scenario Outline",
+        "line": 11,
+        "name": "Incorrect credentials to login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 414331640
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I visit a login page",
+            "match": {
+              "location": "step-definitions/login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1391491309
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I incorrectly fill the login form user \"incorrect_user1\" and password \"incorrect_password1\"",
+            "match": {
+              "location": "step-definitions/login-step.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 503578648
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should see a error message",
+            "match": {
+              "location": "step-definitions/login-step.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9701359
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1492899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-action;incorrect-credentials-to-login",
+        "keyword": "Scenario Outline",
+        "line": 11,
+        "name": "Incorrect credentials to login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 339329868
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I visit a login page",
+            "match": {
+              "location": "step-definitions/login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1416359640
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I incorrectly fill the login form user \"incorrect_user2\" and password \"incorrect_password2\"",
+            "match": {
+              "location": "step-definitions/login-step.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 503819028
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should see a error message",
+            "match": {
+              "location": "step-definitions/login-step.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9224123
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1373146
             }
           }
         ],
