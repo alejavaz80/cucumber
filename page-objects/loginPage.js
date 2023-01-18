@@ -1,4 +1,4 @@
-const { expect } = require('@playwright/test')
+const { expect, request } = require('@playwright/test')
 class LoginPage{
 
     async navigateToLoginPage() {
@@ -15,6 +15,19 @@ class LoginPage{
     async assertErrorMessage(){
         const message = await page.locator(".error-message-container")
         await expect(message).toBeVisible()
+    }
+
+    async loginApi(){
+        const apiContext = await request.newContext();
+
+        const loginResponse = await apiContext.post('https://mipaginanueva/api/respuestaecibido',
+        {
+            data: loginPayload
+        })
+        expect((await loginResponse).ok()).toBeTruthy();
+        const loginResponseJson = await loginResponse.json();
+        const nombrePaciente = loginResponseJson.nombre;
+    
     }
 }
 
